@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/background-home-desktop.jpg);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.side_menu{
+    display: none;
+}
+.nav{
+    background: rgba(134, 134, 134, 0.11);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(1.7px);
+    padding: 20px 60px;
+    position: relative;
+}
+.nav ul{
+    display: flex;
+}
+ul li{
+    color: aliceblue;
+    font-size: 17px;
+}
+.nav ul li{
+    padding: 0px 20px;
+    list-style: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+    padding-left: 7px;
+    position: relative;
+}
+.nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    background-color: aliceblue;
+    transition: all 0.3s;
+}
+.nav ul li a:hover::after{
+    width: 110%;
+}
+.nav ul li a.active::after{
+    width: 110%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+    width: 80%;
+}
+.wrapper .header_text, .wrapper .explore{
+    width: 45%;
+}
+.header_text h3{
+    text-align: s;
+    font-size: 27px;
+}
+
+.header_text h1{
+    font-size: 75px;
+    text-align:start;
+    padding: 20px 0px 30px;
+}
+.header_text h4{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: start;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+}
+.explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explore .exp{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explore .exp h1{
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+}
+footer{
+    background: transparent;
+    margin-top: 3vh;
+}
+footer p{
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 45px 0px 0px;
+    height: 100px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+@media screen and (max-width:768px) {
+    body{
+        background-image: url(images/background-home-tablet.jpg);
+        background-size: auto;
+    }
+    nav{
+        display: none;
+    }
+    .container{
+        margin-top: 20vh;
+    }
+    .wrapper{
+        flex-flow: row wrap;
+    }
+    .explore{
+        margin-top: 7vh;
+    }
+    .wrapper .header_text, .wrapper .explore{
+        width: 95%;
+    }
+
+    /***************** side Menu Section *****************/
+    .side_menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+   }
+   .side_menu .logo h1{
+        color: var(--color);
+        font-size: 35px;
+   }
+   .side_bar{
+        margin-right: 15px;
+   }
+   .side_bar p{
+        width: 30px;
+        height: 3px;
+        background: aliceblue;
+        margin: 7px 0px;
+   }
+   .side_menus{
+        position:fixed;
+        right: 0;
+        top: 0;
+        width: 0px;
+        height: 100%;
+        overflow: hidden;
+        background-color: aliceblue;
+        transition:width 0.8s;
+        z-index: 1;
+   }
+   .side_bar:hover >  .side_menus{
+        width: 65%;
+   }
+   .side_menus ul{
+        margin-top: 10vh;
+   }
+   .side_menus ul li{
+        padding: 20px;
+        list-style: none;
+        transition: all 0.3s;
+   }
+   .side_menus ul li:hover{
+        background:rgb(26, 26, 48);
+   }
+   .side_menus ul li a{
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        color: #000;
+        transition: all 0.3s;
+        padding-bottom: 5px;
+   }
+   .side_menus ul li a:hover{
+        border-bottom: 2px solid aliceblue;
+        color: aliceblue;
+   }
+}
+@media screen and (max-width:414px) {
+    body{
+        background-image: url(images/background-home-mobile.jpg);
+        background-size: 100%;
+    }
+    .container{
+        margin-top: 8vh;
+    }
+    .wrapper{
+        width: 100%;
+    }
+}

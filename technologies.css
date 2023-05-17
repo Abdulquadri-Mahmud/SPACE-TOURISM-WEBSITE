@@ -1,0 +1,151 @@
+body{
+    background-image: url(technologies/background-technology-desktop.jpg);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    margin-top: 10vh;
+}
+.wrapper{
+    flex-direction: column;
+    width: 80%;
+}
+.header{
+    width: 100%;
+    padding-bottom: 8vh;
+}
+.header1{
+    display: block;
+}
+.header2{
+    display: none;
+}
+.header h2{
+    text-align: start;
+    color: gray;
+    font-size:20px;
+    font-weight: 500;
+}
+.space_lunch{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.switcher{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(134, 134, 134, 0.11);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(1.7px);
+}
+.content{
+    width: 45%;
+    padding-left: 30px;
+}
+.selections{
+    width: 10%;
+}
+
+.space_lunch .selections div.selection{
+    height: 55px;
+    width: 55px;
+    margin: 20px 0px;
+    border-radius: 50%;
+    border: 1px solid #a29d9d;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    transition: all 0.3s;
+}
+.space_lunch .selections div.selection:hover {
+    background-color: rgb(214, 222, 230);
+    color: #000;
+}
+.content h3{
+    padding-bottom: 5vh;
+    font-weight: 500;
+    font-size: 20px;
+}
+.content h1{
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 3vh;
+}
+.content p{
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+}
+.space_img{
+    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.space_img img{
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    body{
+        background-image: url(technologies/background-technology-tablet.jpg);
+        background-size: 100%;
+    }
+    .container{
+        margin-top: 5vh;
+    }
+    .wrapper{
+        width: 95%;
+    }
+    .header1{
+        display: none;
+    }
+    .header2{
+        padding-bottom:3vh;
+        display: block;
+    }
+    .space_lunch{
+        flex-flow: row wrap;
+    }
+    .switcher{
+        width: 100%;
+        padding: 30px;
+        flex-direction: column-reverse;
+    }
+    .content{
+        width: 100%;
+        padding-left: 0px;
+    }
+    .selections{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .space_lunch .selections div.selection{
+        margin: 20px 20px;
+    }
+    .space_img{
+        margin-bottom:20px;
+    }
+}
+
+@media only screen and (max-width:414px) {
+    body{
+        background-image: url(technologies/background-technology-mobile.jpg);
+        background-size: 100%;
+    }
+    
+}
